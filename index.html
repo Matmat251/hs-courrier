@@ -4,15 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HS Internacional Courier | Agencia de Carga Internacional</title>
+    <title>HSSC GROUP | Agencia de Carga Internacional</title>
     <meta name="description"
-        content="HS Internacional Courier - Líderes en comercio exterior con soluciones logísticas eficientes y de alta calidad. Servicios de importación desde Miami a Perú.">
+        content="HSSC GROUP - Líderes en comercio exterior con soluciones logísticas eficientes y de alta calidad. Servicios de importación desde Miami a Perú.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shared.css">
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 
@@ -25,7 +30,7 @@
                     <span><i class="fas fa-map-marker-alt"></i> Calle Alas Peruanas #128, Urb. Santa Luzmila –
                         Comas</span>
                     <span><i class="fas fa-envelope"></i> <a
-                            href="mailto:info@hscourier.com">info@hscourier.com</a></span>
+                            href="mailto:info@hsscgroup.com">info@hsscgroup.com</a></span>
                     <span><i class="fas fa-phone"></i> <a href="tel:+51903365398">+51 903 365 398</a></span>
                 </div>
                 <div class="top-bar-right">
@@ -43,17 +48,16 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo">
-                    <img src="images/logo.png" alt="HS Internacional Courier" class="logo-img">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">HSSC <span class="logo-accent">GROUP</span></span>
                 </a>
                 <nav class="nav" id="nav">
                     <ul class="nav-list">
-                        <li><a href="#inicio" class="active">Inicio</a></li>
-                        <li><a href="#nosotros">Conócenos</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#calculadora">Calcula tu Envío</a></li>
-                        <li><a href="#donde-comprar">¿Dónde Comprar?</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="index.html" class="current-page">Inicio</a></li>
+                        <li><a href="nosotros.html">Conócenos</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="tiendas.html">¿Dónde Comprar?</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </nav>
                 <a href="tel:+51903365398" class="header-btn">
@@ -68,7 +72,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Carousel -->
     <section class="hero" id="inicio">
         <div class="hero-slider">
             <div class="hero-slide active"
@@ -78,10 +82,6 @@
                         <h3 class="hero-subtitle">Agencia de Carga Internacional</h3>
                         <h1 class="hero-title">Transporte Rápido <br>y Seguro</h1>
                         <p class="hero-text">Llevamos tus productos más allá de las fronteras con total confianza.</p>
-                        <div class="hero-buttons">
-                            <a href="#servicios" class="btn btn-primary">Nuestros Servicios</a>
-                            <a href="#contacto" class="btn btn-outline">Contáctanos</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -92,10 +92,6 @@
                         <h3 class="hero-subtitle">Importaciones desde Miami</h3>
                         <h1 class="hero-title">Importando Soluciones <br>Para Ti</h1>
                         <p class="hero-text">Simplificando el proceso de importar, de principio a fin.</p>
-                        <div class="hero-buttons">
-                            <a href="#como-funciona" class="btn btn-primary">Cómo Funciona</a>
-                            <a href="#contacto" class="btn btn-outline">Calcula tu Envío</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -106,10 +102,6 @@
                         <h3 class="hero-subtitle">Conectamos con el Mundo</h3>
                         <h1 class="hero-title">Tu Puente Hacia <br>Oportunidades Internacionales</h1>
                         <p class="hero-text">Más de 4099 clientes en todo el Perú confían en nosotros.</p>
-                        <div class="hero-buttons">
-                            <a href="#nosotros" class="btn btn-primary">Conócenos</a>
-                            <a href="#contacto" class="btn btn-outline">Cotiza Ahora</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -123,547 +115,121 @@
             <span class="dot"></span>
             <span class="dot"></span>
         </div>
-
-        <!-- Service Icons Float -->
-        <div class="hero-services">
-            <div class="container">
-                <div class="hero-services-grid">
-                    <a href="#servicios" class="hero-service-item">
-                        <i class="fas fa-warehouse"></i>
-                        <span>Almacenaje</span>
-                    </a>
-                    <a href="#servicios" class="hero-service-item">
-                        <i class="fas fa-plane"></i>
-                        <span>Flete Aéreo</span>
-                    </a>
-                    <a href="#servicios" class="hero-service-item">
-                        <i class="fas fa-file-alt"></i>
-                        <span>Agencia de Aduanas</span>
-                    </a>
-                    <a href="#servicios" class="hero-service-item">
-                        <i class="fas fa-truck"></i>
-                        <span>Delivery Nacional</span>
-                    </a>
-                    <a href="#servicios" class="hero-service-item">
-                        <i class="fas fa-box"></i>
-                        <span>Consolidación</span>
-                    </a>
-                </div>
-            </div>
-        </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="nosotros">
+    <!-- Planet with Services Section -->
+    <section class="planet-services-section">
+        <div class="stars-container"></div>
         <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <div class="about-image-main">
-                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600"
-                            alt="HS Courier Logística">
-                    </div>
-                    <div class="about-image-secondary">
-                        <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400"
-                            alt="Envíos Internacionales">
-                    </div>
-                    <div class="about-experience">
-                        <span class="experience-number">4099+</span>
-                        <span class="experience-text">Clientes Satisfechos</span>
-                    </div>
-                </div>
-                <div class="about-content">
-                    <span class="section-tag">Conócenos</span>
-                    <h2 class="section-title">HS INTERNACIONAL COURIER</h2>
-                    <p class="about-text">Somos líderes en el comercio exterior con soluciones logísticas eficientes y
-                        de alta calidad. Nos especializamos en la gestión integral de la cadena de suministro,
-                        asegurando un servicio personalizado y adaptado a las necesidades de cada cliente. Nuestro
-                        equipo de expertos maneja con destreza cada etapa del proceso, desde el despacho aduanero hasta
-                        la entrega final. Gracias a nuestra red global de contactos y alianzas estratégicas,
-                        garantizamos tiempos de entrega óptimos y costos competitivos.</p>
-                    <p class="about-text">La excelencia es nuestra filosofía. Innovamos constantemente para ofrecer
-                        soluciones logísticas que superen las expectativas y generen valor en cada operación. Ya sea
-                        para envíos terrestres, aéreos o marítimos, nuestro compromiso es ofrecer un servicio confiable,
-                        rápido y seguro.</p>
-                    <div class="about-features">
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Entrega rápida</span>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Entrega segura y protegida</span>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Warehouse en Miami</span>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Atención personalizada</span>
-                        </div>
-                    </div>
-                    <div class="about-miami">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <strong>Dirección en Miami:</strong>
-                            <p>7270 NW 35th Terrace, Suite 101 Miami, FL. 33122</p>
-                        </div>
-                    </div>
-                    <a href="#contacto" class="btn btn-primary">Contáctanos</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="servicios">
-        <div class="container">
-            <div class="section-header">
+            <div class="section-header" data-aos="fade-up">
                 <span class="section-tag">Nuestros Servicios</span>
-                <h2 class="section-title">Servicios Rápidos y Profesionales</h2>
+                <h2 class="section-title">Conectamos Tu Mundo</h2>
                 <p class="section-desc">Diferenciación, innovación y calidad en todos nuestros servicios logísticos.</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-warehouse"></i>
-                    </div>
-                    <h3>Almacenaje</h3>
-                    <p>Nuestro almacén en Estados Unidos está estratégicamente ubicado para recibir y gestionar
-                        eficientemente las compras de nuestros clientes. Con instalaciones de última generación y un
-                        equipo altamente capacitado, garantizamos un manejo seguro y rápido de todos los pedidos.</p>
-                    <a href="#contacto" class="service-link">Más Información <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-plane"></i>
-                    </div>
-                    <h3>Flete Aéreo Internacional</h3>
-                    <p>Nos enorgullece ofrecer servicios de fletes internacionales a través de alianzas estratégicas con
-                        las aerolíneas más eficientes del mercado. Garantizamos que tus cargas lleguen a Lima de manera
-                        rápida, segura y puntual.</p>
-                    <a href="#contacto" class="service-link">Más Información <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <h3>Agencia de Aduanas</h3>
-                    <p>Ofrecemos soluciones aduaneras y logísticas de primer nivel, gestionando despachos,
-                        almacenamiento, distribución y asesoría en comercio exterior. Con tecnología de punta
-                        garantizamos eficiencia y transparencia.</p>
-                    <a href="#contacto" class="service-link">Más Información <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-truck"></i>
-                    </div>
-                    <h3>Delivery Nacional</h3>
-                    <p>Ofrecemos servicios de entrega rápida y segura a toda Lima, Callao y provincias. Con una
-                        excelente cadena de transporte, garantizamos que tus envíos lleguen a su destino de manera
-                        puntual y eficiente.</p>
-                    <a href="#contacto" class="service-link">Más Información <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-boxes"></i>
-                    </div>
-                    <h3>Consolidación</h3>
-                    <p>Consolidamos todas tus compras en un solo envío para optimizar costos.</p>
-                    <a href="#contacto" class="service-link">Más Información <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Asesoría Personalizada</h3>
-                    <p>Orientación completa en temas de importación y exportación para tu negocio.</p>
-                    <a href="#contacto" class="service-link">Más Información <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Shipping Calculator Section -->
-    <section class="calculator" id="calculadora">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Cotizador</span>
-                <h2 class="section-title">Calcula tu Envío</h2>
-                <p class="section-desc">Ingresa los datos de tu paquete y conoce el costo estimado del envío desde Miami
-                    a Perú.</p>
-            </div>
-            <div class="calculator-container">
-                <div class="calculator-box">
-                    <div class="calculator-icon">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <h3>Calculadora de Envíos</h3>
-                    <div class="calc-form">
-                        <div class="calc-input-group">
-                            <label for="productCost">Costo del producto (USD)</label>
-                            <input type="number" id="productCost" placeholder="Ej: 100" min="1" step="0.01">
+            <div class="planet-services-layout">
+                <!-- Left Services -->
+                <div class="planet-services-col left">
+                    <a href="servicios.html#almacenaje" class="planet-service-item" data-aos="fade-right"
+                        data-aos-delay="100">
+                        <div class="planet-service-icon">
+                            <i class="fas fa-warehouse"></i>
                         </div>
-                        <div class="calc-input-group">
-                            <label for="weight">Peso del paquete (kg)</label>
-                            <input type="number" id="weight" placeholder="Ej: 3" min="0.1" step="0.1">
+                        <div class="planet-service-content">
+                            <h4>Almacenaje</h4>
+                            <p>Warehouse en Miami con instalaciones de última generación.</p>
                         </div>
-                        <div class="calc-input-group">
-                            <label for="zone">Zona de entrega</label>
-                            <select id="zone">
-                                <option value="lima">Lima Metropolitana</option>
-                                <option value="callao">Callao</option>
-                                <option value="provincia">Provincia</option>
-                                <option value="sindelivery">Sin Delivery (Recoger en almacén)</option>
-                            </select>
+                    </a>
+                    <a href="servicios.html#flete" class="planet-service-item" data-aos="fade-right"
+                        data-aos-delay="200">
+                        <div class="planet-service-icon">
+                            <i class="fas fa-plane"></i>
                         </div>
-                        <button type="button" id="calcBtn" class="btn btn-primary btn-block">
-                            <i class="fas fa-calculator"></i> Calcular Precio
-                        </button>
-                    </div>
-                    <div class="calc-result" id="calcResult" style="display: none;">
-                        <div class="result-breakdown">
-                            <div class="result-row">
-                                <span class="result-label"><i class="fas fa-plane"></i> Flete Miami → Lima</span>
-                                <span class="result-value" id="fletePrice">$0.00</span>
-                            </div>
-                            <div class="result-row">
-                                <span class="result-label"><i class="fas fa-file-invoice"></i> Costo
-                                    Administrativo</span>
-                                <span class="result-value" id="adminPrice">$9.00</span>
-                            </div>
-                            <div class="result-row" id="deliveryRow">
-                                <span class="result-label"><i class="fas fa-truck"></i> Delivery</span>
-                                <span class="result-value" id="deliveryPrice">$7.00</span>
-                            </div>
-                            <div class="result-row result-total">
-                                <span class="result-label"><strong>TOTAL</strong></span>
-                                <span class="result-value result-price" id="resultPrice">$0.00</span>
-                            </div>
+                        <div class="planet-service-content">
+                            <h4>Flete Aéreo</h4>
+                            <p>Alianzas con las mejores aerolíneas del mercado.</p>
                         </div>
-                        <div class="result-message" id="resultMessage" style="display: none;"></div>
-                        <p class="result-note">* El precio final puede variar según dimensiones y tipo de mercancía.</p>
-                    </div>
+                    </a>
+                    <a href="servicios.html#aduanas" class="planet-service-item" data-aos="fade-right"
+                        data-aos-delay="300">
+                        <div class="planet-service-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="planet-service-content">
+                            <h4>Agencia de Aduanas</h4>
+                            <p>Soluciones aduaneras y logísticas de primer nivel.</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="pricing-info">
-                    <h3>Información de Tarifas</h3>
-                    <div class="pricing-details">
-                        <div class="pricing-item">
-                            <div class="pricing-item-icon">
-                                <i class="fas fa-plane"></i>
-                            </div>
-                            <div class="pricing-item-content">
-                                <h4>Flete Internacional</h4>
-                                <p>$10 USD por kilogramo</p>
-                                <span class="pricing-item-note">Miami → Lima</span>
-                            </div>
-                        </div>
-                        <div class="pricing-item">
-                            <div class="pricing-item-icon">
-                                <i class="fas fa-file-invoice"></i>
-                            </div>
-                            <div class="pricing-item-content">
-                                <h4>Costo Administrativo</h4>
-                                <p>$9 USD (fijo)</p>
-                                <span class="pricing-item-note">Trámites y gestión</span>
-                            </div>
-                        </div>
-                        <div class="pricing-item">
-                            <div class="pricing-item-icon">
-                                <i class="fas fa-truck"></i>
-                            </div>
-                            <div class="pricing-item-content">
-                                <h4>Delivery Lima / Callao</h4>
-                                <p>$7 USD</p>
-                                <span class="pricing-item-note">Entrega a domicilio</span>
-                            </div>
-                        </div>
-                        <div class="pricing-item">
-                            <div class="pricing-item-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="pricing-item-content">
-                                <h4>Envío a Provincia</h4>
-                                <p>Pago en destino</p>
-                                <span class="pricing-item-note">Mediante agencia de su preferencia</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="pricing-contact">¿Tienes una carga especial? <a href="#contacto">Contáctanos</a> para una
-                        cotización personalizada.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Where to Buy Section -->
-    <section class="where-buy" id="donde-comprar">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Tiendas</span>
-                <h2 class="section-title">¿Dónde Comprar?</h2>
-                <p class="section-desc">Encuentra tus tiendas favoritas en Estados Unidos. Compra y usa nuestra
-                    dirección en Miami.</p>
-            </div>
-            <div class="stores-tabs">
-                <button class="store-tab active" data-category="favoritos">
-                    <i class="fas fa-star"></i> Los Más Favoritos
-                </button>
-                <button class="store-tab" data-category="ropa">
-                    <i class="fas fa-tshirt"></i> Ropa
-                </button>
-                <button class="store-tab" data-category="tecnologia">
-                    <i class="fas fa-laptop"></i> Tecnología
-                </button>
-                <button class="store-tab" data-category="calzado">
-                    <i class="fas fa-shoe-prints"></i> Calzado
-                </button>
-                <button class="store-tab" data-category="relojes">
-                    <i class="fas fa-clock"></i> Relojes
-                </button>
-                <button class="store-tab" data-category="carteras">
-                    <i class="fas fa-shopping-bag"></i> Carteras
-                </button>
-            </div>
-            <div class="stores-grid" id="storesGrid">
-                <!-- Favoritos -->
-                <div class="store-category active" data-category="favoritos">
-                    <a href="https://www.amazon.com/-/es/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fab fa-amazon"></i></div>
-                        <span>Amazon</span>
-                    </a>
-                    <a href="https://www.bestbuy.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-tag"></i></div>
-                        <span>Best Buy</span>
-                    </a>
-                    <a href="https://www.ebay.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fab fa-ebay"></i></div>
-                        <span>eBay</span>
-                    </a>
-                    <a href="https://shop.simon.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-store"></i></div>
-                        <span>Shop Simon</span>
-                    </a>
-                    <a href="https://www.jomashop.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-gem"></i></div>
-                        <span>Jomashop</span>
-                    </a>
-                </div>
-                <!-- Ropa -->
-                <div class="store-category" data-category="ropa">
-                    <a href="https://us.shein.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-tshirt"></i></div>
-                        <span>SHEIN</span>
-                    </a>
-                    <a href="https://www.forever21.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-tshirt"></i></div>
-                        <span>Forever 21</span>
-                    </a>
-                    <a href="https://www.gapfactory.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-tshirt"></i></div>
-                        <span>Gap Factory</span>
-                    </a>
-                    <a href="https://usa.tommy.com/en" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-tshirt"></i></div>
-                        <span>Tommy Hilfiger</span>
-                    </a>
-                    <a href="https://www.6pm.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-tshirt"></i></div>
-                        <span>6PM</span>
-                    </a>
-                    <a href="https://oldnavy.gap.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-tshirt"></i></div>
-                        <span>Old Navy</span>
-                    </a>
-                    <a href="https://www.asos.com/us/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-tshirt"></i></div>
-                        <span>ASOS</span>
-                    </a>
-                    <a href="https://www.carters.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-baby"></i></div>
-                        <span>Carter's</span>
-                    </a>
-                </div>
-                <!-- Tecnología -->
-                <div class="store-category" data-category="tecnologia">
-                    <a href="https://www.newegg.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-microchip"></i></div>
-                        <span>Newegg</span>
-                    </a>
-                    <a href="https://www.backmarket.com/en-us" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-mobile-alt"></i></div>
-                        <span>Back Market</span>
-                    </a>
-                    <a href="https://swappa.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-mobile-alt"></i></div>
-                        <span>Swappa</span>
-                    </a>
-                    <a href="https://www.amazon.com/-/es/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fab fa-amazon"></i></div>
-                        <span>Amazon</span>
-                    </a>
-                    <a href="https://www.ebay.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fab fa-ebay"></i></div>
-                        <span>eBay</span>
-                    </a>
-                    <a href="https://www.gamestop.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-gamepad"></i></div>
-                        <span>GameStop</span>
-                    </a>
-                    <a href="https://www.microcenter.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-desktop"></i></div>
-                        <span>Micro Center</span>
-                    </a>
-                </div>
-                <!-- Calzado -->
-                <div class="store-category" data-category="calzado">
-                    <a href="https://www.adidas.com/us" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-shoe-prints"></i></div>
-                        <span>Adidas</span>
-                    </a>
-                    <a href="https://www.nike.com/us/es/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-shoe-prints"></i></div>
-                        <span>Nike</span>
-                    </a>
-                    <a href="https://www.newbalance.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-shoe-prints"></i></div>
-                        <span>New Balance</span>
-                    </a>
-                    <a href="https://www.snipes.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-shoe-prints"></i></div>
-                        <span>Snipes</span>
-                    </a>
-                    <a href="https://www.finishline.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-shoe-prints"></i></div>
-                        <span>Finish Line</span>
-                    </a>
-                </div>
-                <!-- Relojes -->
-                <div class="store-category" data-category="relojes">
-                    <a href="https://www.6pm.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-clock"></i></div>
-                        <span>6PM</span>
-                    </a>
-                    <a href="https://invictastores.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-clock"></i></div>
-                        <span>Invicta Store</span>
-                    </a>
-                    <a href="https://www.casio.com/us/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-clock"></i></div>
-                        <span>Casio</span>
-                    </a>
-                    <a href="https://www.amazon.com/-/es/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fab fa-amazon"></i></div>
-                        <span>Amazon</span>
-                    </a>
-                    <a href="https://www.fossil.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-clock"></i></div>
-                        <span>Fossil</span>
-                    </a>
-                </div>
-                <!-- Carteras -->
-                <div class="store-category" data-category="carteras">
-                    <a href="https://usa.tommy.com/en" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-shopping-bag"></i></div>
-                        <span>Tommy Hilfiger</span>
-                    </a>
-                    <a href="https://www.nordstrom.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-shopping-bag"></i></div>
-                        <span>Nordstrom</span>
-                    </a>
-                    <a href="https://www.asos.com/us/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-shopping-bag"></i></div>
-                        <span>ASOS</span>
-                    </a>
-                    <a href="https://shop.simon.com/" target="_blank" class="store-card">
-                        <div class="store-logo"><i class="fas fa-shopping-bag"></i></div>
-                        <span>Shop Simon</span>
-                    </a>
-                </div>
-            </div>
-            <div class="miami-address-box">
-                <div class="miami-icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="miami-content">
-                    <h4>Dirección de Envío en Miami</h4>
-                    <p class="miami-address">7270 NW 35th Terrace, Suite 101 Miami, FL. 33122</p>
-                    <p class="miami-note">Usa esta dirección al realizar tus compras en cualquier tienda de Estados
-                        Unidos.</p>
-                </div>
-                <button class="btn btn-primary copy-address" id="copyAddress">
-                    <i class="fas fa-copy"></i> Copiar Dirección
-                </button>
-            </div>
-        </div>
-    </section>
+                <!-- Center Planet -->
+                <div class="planet-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="planet-container-center">
+                        <div class="planet-wrapper">
+                            <!-- Anillos orbitantes -->
+                            <div class="orbit-ring orbit-ring-1">
+                                <div class="orbit-particle particle-1"></div>
+                                <div class="orbit-particle particle-2"></div>
+                            </div>
+                            <div class="orbit-ring orbit-ring-2">
+                                <div class="orbit-particle particle-3"></div>
+                                <div class="orbit-particle particle-4"></div>
+                            </div>
+                            <div class="orbit-ring orbit-ring-3"></div>
 
-    <!-- Successful Deliveries Section -->
-    <section class="entregas-exitosas" id="entregas">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Galería</span>
-                <h2 class="section-title">Entregas Exitosas</h2>
-                <p class="section-desc">Clientes satisfechos que confiaron en nuestro servicio de courier internacional.
-                </p>
+                            <!-- Esfera principal -->
+                            <div class="planet-sphere"></div>
+
+                            <!-- Puntos de conexión -->
+                            <div class="connection-dots">
+                                <div class="connection-dot dot-1"></div>
+                                <div class="connection-dot dot-2"></div>
+                                <div class="connection-dot dot-3"></div>
+                                <div class="connection-dot dot-4"></div>
+                                <div class="connection-dot dot-5"></div>
+                                <div class="connection-dot dot-6"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Services -->
+                <div class="planet-services-col right">
+                    <a href="servicios.html#delivery" class="planet-service-item" data-aos="fade-left"
+                        data-aos-delay="100">
+                        <div class="planet-service-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="planet-service-content">
+                            <h4>Delivery Nacional</h4>
+                            <p>Entrega rápida a Lima, Callao y provincias.</p>
+                        </div>
+                    </a>
+                    <a href="servicios.html#consolidacion" class="planet-service-item" data-aos="fade-left"
+                        data-aos-delay="200">
+                        <div class="planet-service-icon">
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                        <div class="planet-service-content">
+                            <h4>Consolidación</h4>
+                            <p>Agrupamos tus compras en un solo envío.</p>
+                        </div>
+                    </a>
+                    <a href="servicios.html#asesoria" class="planet-service-item" data-aos="fade-left"
+                        data-aos-delay="300">
+                        <div class="planet-service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="planet-service-content">
+                            <h4>Asesoría</h4>
+                            <p>Orientación en importación y exportación.</p>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="entregas-stats">
-                <div class="stat-item">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Entregas Exitosas</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">98%</span>
-                    <span class="stat-label">Clientes Satisfechos</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">24-48h</span>
-                    <span class="stat-label">Tiempo de Entrega</span>
-                </div>
-            </div>
-            <div class="entregas-gallery">
-                <div class="gallery-item">
-                    <img src="images/cliente01.jpg" alt="Cliente satisfecho con su entrega" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Entrega Exitosa</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/cliente02.jpg" alt="Cliente satisfecho con su entrega" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Entrega Exitosa</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/cliente03.jpg" alt="Cliente satisfecho con su entrega" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Entrega Exitosa</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/cliente04.jpg" alt="Cliente satisfecho con su entrega" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Entrega Exitosa</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/cliente05.jpg" alt="Cliente satisfecho con su entrega" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Entrega Exitosa</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/cliente06.jpg" alt="Cliente satisfecho con su entrega" loading="lazy">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Entrega Exitosa</span>
-                    </div>
-                </div>
+
+            <div class="planet-services-cta">
+                <a href="servicios.html" class="btn btn-primary btn-lg">Ver Todos los Servicios</a>
             </div>
         </div>
     </section>
@@ -671,13 +237,13 @@
     <!-- How It Works Section -->
     <section class="how-works" id="como-funciona">
         <div class="container">
-            <div class="section-header light">
+            <div class="section-header light" data-aos="fade-up">
                 <span class="section-tag">Proceso Simple</span>
                 <h2 class="section-title">¿Cómo Funciona?</h2>
                 <p class="section-desc">En solo 3 pasos, recibe tus compras desde Estados Unidos.</p>
             </div>
             <div class="steps-grid">
-                <div class="step-card">
+                <div class="step-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="step-number">01</div>
                     <div class="step-icon">
                         <i class="fas fa-shopping-cart"></i>
@@ -686,15 +252,15 @@
                     <p>Ingresa a tus tiendas favoritas y empieza a comprar. Recuerda siempre usar nuestra dirección en
                         Miami.</p>
                 </div>
-                <div class="step-card">
+                <div class="step-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="step-number">02</div>
                     <div class="step-icon">
                         <i class="fas fa-calendar-check"></i>
                     </div>
                     <h3>Programa</h3>
-                    <p>Registra tus compras y comunícate con nuestros asesores por correo: envios@hscourier.com.</p>
+                    <p>Registra tus compras y comunícate con nuestros asesores por correo: envios@hsscgroup.com.</p>
                 </div>
-                <div class="step-card">
+                <div class="step-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="step-number">03</div>
                     <div class="step-icon">
                         <i class="fas fa-box-open"></i>
@@ -706,57 +272,22 @@
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-us">
+    <!-- Miami Address CTA -->
+    <section class="miami-cta">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">¿Por qué elegirnos?</span>
-                <h2 class="section-title">Algunas Razones para Elegirnos</h2>
-            </div>
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i class="fas fa-globe-americas"></i>
-                    </div>
-                    <h3>Red Global</h3>
-                    <p>Conecta tu negocio con centros internacionales en todo el mundo, tiendas, proveedores y más.</p>
+            <div class="miami-cta-content">
+                <div class="miami-cta-icon">
+                    <i class="fas fa-map-marker-alt"></i>
                 </div>
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <h3>Envíos Especiales</h3>
-                    <p>Si tus mercancías tienen requisitos especiales de movimiento y manipulación, tenemos la
-                        experiencia.</p>
+                <div class="miami-cta-text">
+                    <h3>Nuestra Dirección en Miami</h3>
+                    <p class="miami-address-text">7270 NW 35th Terrace, Suite 101 Miami, FL. 33122</p>
+                    <p class="miami-note">Usa esta dirección al realizar tus compras en cualquier tienda de Estados
+                        Unidos.</p>
                 </div>
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>Entrega a Tiempo</h3>
-                    <p>Tú haces tu pedido y nosotros nos encargamos del resto. Desde la recepción hasta la entrega.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Soluciones a Medida</h3>
-                    <p>Proporcionamos soluciones personalizadas a todos los puertos y aeropuertos del mundo.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Soporte 24/7</h3>
-                    <p>Nuestro equipo está disponible las 24 horas del día, los 7 días de la semana.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Empresa Confiable</h3>
-                    <p>Más de 4099 clientes en todo el Perú nos han elegido como su socio de carga internacional.</p>
-                </div>
+                <button class="btn btn-accent" id="copyAddressBtn">
+                    <i class="fas fa-copy"></i> Copiar Dirección
+                </button>
             </div>
         </div>
     </section>
@@ -774,168 +305,7 @@
                         <i class="fas fa-phone-alt"></i>
                         <span>+51 903 365 398</span>
                     </a>
-                    <a href="#contacto" class="btn btn-light">Contáctanos</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">FAQ</span>
-                <h2 class="section-title">Preguntas Frecuentes</h2>
-            </div>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>01. ¿Qué es el Servicio de Entrega Rápida?</span>
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Es el servicio de embarque, traslado y entrega rápida de paquetes y documentos provenientes
-                            del exterior.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>02. ¿Qué incluye el Servicio de entrega rápida internacional?</span>
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <ul>
-                            <li>Recepción en nuestro Warehouse de Miami</li>
-                            <li>Custodia de mercancía</li>
-                            <li>Consolidación de mercancía</li>
-                            <li>Envío a Perú</li>
-                            <li>Nacionalización de mercancía</li>
-                            <li>Despacho y retiro de almacén aduanero</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>03. ¿Hacen el servicio de entrega a provincia?</span>
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Enviamos la mercancía a provincia mediante la agencia que usted prefiera. La agencia debe
-                            permitir la modalidad "pago a destino".</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>04. ¿Cuál es la dirección de Estados Unidos - Miami?</span>
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Puedes enviar tus compras a la dirección <strong>7270 NW 35th Terrace, Suite 101 Miami, FL.
-                                33122</strong></p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>05. ¿Cuándo se paga impuestos a la SUNAT?</span>
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Cuando el producto supera los $200.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>06. ¿Cómo puedo importar productos restringidos?</span>
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Para poder ingresar las mercancías restringidas se requiere de la autorización de una o más
-                            entidades competentes (Produce, Digemid, Digesta, Sucamec, Mincetur, Senasa, Mtc, Ipen,
-                            etc).</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contacto">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <span class="section-tag">Contáctanos</span>
-                    <h2 class="section-title">Le Facilitamos su Importación</h2>
-                    <p>Estamos a su disposición para brindarle toda la información necesaria desde el inicio del
-                        servicio hasta la entrega de su carga.</p>
-
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <strong>Dirección Perú:</strong>
-                                <p>Calle Alas Peruanas #128, Urb. Santa Luzmila 1era etapa – Comas</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <strong>Dirección Miami:</strong>
-                                <p>7270 NW 35th Terrace, Suite 101 Miami, FL. 33122</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <div>
-                                <strong>Teléfono:</strong>
-                                <p><a href="tel:+51903365398">+51 903 365 398</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <strong>Correo:</strong>
-                                <p><a href="mailto:info@hscourier.com">info@hscourier.com</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <strong>Horario:</strong>
-                                <p>Lun - Vie: 9:00 AM - 6:00 PM</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-social">
-                        <a href="https://www.facebook.com/HSInternationalCourier/" target="_blank"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/hs.international.courier/" target="_blank"><i
-                                class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contactForm">
-                        <h3>Envíanos un Mensaje</h3>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" id="name" placeholder="Tu Nombre" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" placeholder="Tu Email" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" placeholder="Tu Teléfono">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" placeholder="Asunto">
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" rows="5" placeholder="Tu Mensaje" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje <i
-                                class="fas fa-paper-plane"></i></button>
-                    </form>
+                    <a href="contacto.html" class="btn btn-light">Contáctanos</a>
                 </div>
             </div>
         </div>
@@ -945,12 +315,12 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-about">
-                    <a href="#" class="footer-logo">
-                        <span class="logo-text">HS</span>
-                        <span class="logo-sub">INTERNACIONAL COURIER</span>
-                    </a>
-                    <p>Somos líderes en el comercio exterior con soluciones logísticas eficientes y de alta calidad.</p>
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-text">HSSC <span class="logo-accent">GROUP</span></span>
+                    </div>
+                    <p class="footer-desc">Líderes en comercio exterior con soluciones logísticas eficientes y de alta
+                        calidad.</p>
                     <div class="footer-social">
                         <a href="https://www.facebook.com/HSInternationalCourier/" target="_blank"><i
                                 class="fab fa-facebook-f"></i></a>
@@ -958,86 +328,78 @@
                                 class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="footer-links">
+                <div class="footer-col">
                     <h4>Enlaces Rápidos</h4>
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#nosotros">Sobre Nosotros</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#como-funciona">Cómo Funciona</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Conócenos</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="tiendas.html">¿Dónde Comprar?</a></li>
                     </ul>
                 </div>
-                <div class="footer-services">
+                <div class="footer-col">
                     <h4>Servicios</h4>
-                    <ul>
-                        <li><a href="#servicios">Almacenaje</a></li>
-                        <li><a href="#servicios">Flete Aéreo Internacional</a></li>
-                        <li><a href="#servicios">Agencia de Aduanas</a></li>
-                        <li><a href="#servicios">Delivery Nacional</a></li>
+                    <ul class="footer-links">
+                        <li><a href="servicios.html#almacenaje">Almacenaje</a></li>
+                        <li><a href="servicios.html#flete">Flete Aéreo</a></li>
+                        <li><a href="servicios.html#aduanas">Agencia de Aduanas</a></li>
+                        <li><a href="servicios.html#delivery">Delivery Nacional</a></li>
                     </ul>
                 </div>
-                <div class="footer-contact">
-                    <h4>Contáctanos</h4>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Ubr Santa Luzmila 1era etapa – Comas</span>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>info@hscourier.com</span>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+51 903 365 398</span>
-                    </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Calle Alas Peruanas #128, Urb. Santa Luzmila – Comas
+                        </li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+51903365398">+51 903 365 398</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@hsscgroup.com">info@hsscgroup.com</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 HS Internacional Courier. Todos los Derechos Reservados.</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Términos & Condiciones</a>
-                    <a href="#">Política de Privacidad</a>
-                </div>
+                <p>&copy; 2024 HSSC GROUP. Todos los derechos reservados.</p>
+                <p class="developer-credit">Diseño web por <a href="#" target="_blank">MathewDev</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <div class="whatsapp-widget" id="whatsappWidget">
-        <!-- Popup Chat Window -->
-        <div class="whatsapp-popup" id="whatsappPopup">
-            <div class="whatsapp-popup-header">
-                <div class="whatsapp-popup-title">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>WhatsApp</span>
-                </div>
-                <button class="whatsapp-close" id="whatsappClose">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="whatsapp-popup-body">
-                <div class="whatsapp-message">
-                    <span class="whatsapp-emoji">👋</span>
-                    <p>Hola</p>
-                    <p>¿Podemos ayudarte?</p>
-                </div>
-            </div>
-            <div class="whatsapp-popup-footer">
-                <a href="https://api.whatsapp.com/send/?phone=51903365398&text=Hola+HS%2C+necesito+informaci%C3%B3n+sobre+el+servicio+de+courier.&type=phone_number&app_absent=0"
-                    target="_blank" class="whatsapp-open-btn">
-                    Abrir Chat <i class="fab fa-whatsapp"></i>
-                </a>
-            </div>
-        </div>
-        <!-- Floating Button -->
-        <button class="whatsapp-button" id="whatsappBtn">
-            <i class="fab fa-whatsapp"></i>
-        </button>
-    </div>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/51903365398?text=Hola,%20quiero%20información%20sobre%20sus%20servicios" class="whatsapp-btn"
+        target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="shared.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50,
+            delay: 100
+        });
+
+        // Copy address functionality
+        document.getElementById('copyAddressBtn')?.addEventListener('click', function () {
+            const address = '7270 NW 35th Terrace, Suite 101 Miami, FL. 33122';
+            HSSCUtils.copyToClipboard(address, function (success) {
+                const btn = document.getElementById('copyAddressBtn');
+                if (success) {
+                    btn.innerHTML = '<i class="fas fa-check"></i> ¡Copiado!';
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fas fa-copy"></i> Copiar Dirección';
+                    }, 2000);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Dónde Comprar? | HSSC GROUP</title>
+    <meta name="description"
+        content="Encuentra las mejores tiendas de Estados Unidos para hacer tus compras. Amazon, eBay, Nike, Adidas y más.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span><i class="fas fa-map-marker-alt"></i> Calle Alas Peruanas #128, Urb. Santa Luzmila –
+                        Comas</span>
+                    <span><i class="fas fa-envelope"></i> <a
+                            href="mailto:info@hsscgroup.com">info@hsscgroup.com</a></span>
+                    <span><i class="fas fa-phone"></i> <a href="tel:+51903365398">+51 903 365 398</a></span>
+                </div>
+                <div class="top-bar-right">
+                    <span>Síguenos:</span>
+                    <a href="https://www.facebook.com/HSInternationalCourier/" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/hs.international.courier/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">HSSC <span class="logo-accent">GROUP</span></span>
+                </a>
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Conócenos</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="tiendas.html" class="current-page">¿Dónde Comprar?</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <a href="tel:+51903365398" class="header-btn">
+                    <i class="fas fa-phone"></i> Contáctanos
+                </a>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>¿Dónde Comprar?</h1>
+        </div>
+    </section>
+
+    <!-- Where to Buy Section -->
+    <section class="where-buy" id="donde-comprar">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Tiendas</span>
+                <h2 class="section-title">Tiendas Recomendadas</h2>
+                <p class="section-desc">Encuentra tus tiendas favoritas en Estados Unidos. Compra y usa nuestra
+                    dirección en Miami.</p>
+            </div>
+            <div class="stores-tabs" data-aos="fade-up" data-aos-delay="100">
+                <button class="store-tab active" data-category="favoritos">
+                    <i class="fas fa-star"></i> Los Más Favoritos
+                </button>
+                <button class="store-tab" data-category="ropa">
+                    <i class="fas fa-tshirt"></i> Ropa
+                </button>
+                <button class="store-tab" data-category="tecnologia">
+                    <i class="fas fa-laptop"></i> Tecnología
+                </button>
+                <button class="store-tab" data-category="calzado">
+                    <i class="fas fa-shoe-prints"></i> Calzado
+                </button>
+                <button class="store-tab" data-category="relojes">
+                    <i class="fas fa-clock"></i> Relojes
+                </button>
+                <button class="store-tab" data-category="carteras">
+                    <i class="fas fa-shopping-bag"></i> Carteras
+                </button>
+            </div>
+            <div class="stores-grid" id="storesGrid">
+                <!-- Favoritos -->
+                <div class="store-category active" data-category="favoritos">
+                    <a href="https://www.amazon.com/-/es/" target="_blank" class="store-card">
+                        <div class="store-logo"><i class="fab fa-amazon"></i></div>
+                        <span>Amazon</span>
+                    </a>
+                    <a href="https://www.bestbuy.com/" target="_blank" class="store-card">
+                        <div class="store-logo best-buy"><span>B</span></div>
+                        <span>Best Buy</span>
+                    </a>
+                    <a href="https://www.ebay.com/" target="_blank" class="store-card">
+                        <div class="store-logo"><i class="fab fa-ebay"></i></div>
+                        <span>eBay</span>
+                    </a>
+                    <a href="https://shop.simon.com/" target="_blank" class="store-card">
+                        <div class="store-logo simon"><span>S</span></div>
+                        <span>Shop Simon</span>
+                    </a>
+                    <a href="https://www.jomashop.com/" target="_blank" class="store-card">
+                        <div class="store-logo jomashop"><i class="fas fa-gem"></i></div>
+                        <span>Jomashop</span>
+                    </a>
+                </div>
+                <!-- Ropa -->
+                <div class="store-category" data-category="ropa">
+                    <a href="https://us.shein.com/" target="_blank" class="store-card">
+                        <div class="store-logo shein"><span>S</span></div>
+                        <span>SHEIN</span>
+                    </a>
+                    <a href="https://www.forever21.com/" target="_blank" class="store-card">
+                        <div class="store-logo f21"><span>21</span></div>
+                        <span>Forever 21</span>
+                    </a>
+                    <a href="https://www.gapfactory.com/" target="_blank" class="store-card">
+                        <div class="store-logo gap"><span>GAP</span></div>
+                        <span>Gap Factory</span>
+                    </a>
+                    <a href="https://usa.tommy.com/en" target="_blank" class="store-card">
+                        <div class="store-logo tommy"><span>TH</span></div>
+                        <span>Tommy Hilfiger</span>
+                    </a>
+                    <a href="https://www.6pm.com/" target="_blank" class="store-card">
+                        <div class="store-logo sixpm"><span>6</span></div>
+                        <span>6PM</span>
+                    </a>
+                    <a href="https://oldnavy.gap.com/" target="_blank" class="store-card">
+                        <div class="store-logo oldnavy"><span>ON</span></div>
+                        <span>Old Navy</span>
+                    </a>
+                    <a href="https://www.asos.com/us/" target="_blank" class="store-card">
+                        <div class="store-logo asos"><span>A</span></div>
+                        <span>ASOS</span>
+                    </a>
+                    <a href="https://www.carters.com/" target="_blank" class="store-card">
+                        <div class="store-logo carters"><i class="fas fa-baby"></i></div>
+                        <span>Carter's</span>
+                    </a>
+                </div>
+                <!-- Tecnología -->
+                <div class="store-category" data-category="tecnologia">
+                    <a href="https://www.apple.com/" target="_blank" class="store-card">
+                        <div class="store-logo"><i class="fab fa-apple"></i></div>
+                        <span>Apple</span>
+                    </a>
+                    <a href="https://www.newegg.com/" target="_blank" class="store-card">
+                        <div class="store-logo newegg"><span>N</span></div>
+                        <span>Newegg</span>
+                    </a>
+                    <a href="https://www.backmarket.com/en-us" target="_blank" class="store-card">
+                        <div class="store-logo backmarket"><i class="fas fa-recycle"></i></div>
+                        <span>Back Market</span>
+                    </a>
+                    <a href="https://swappa.com/" target="_blank" class="store-card">
+                        <div class="store-logo swappa"><span>SW</span></div>
+                        <span>Swappa</span>
+                    </a>
+                    <a href="https://www.amazon.com/-/es/" target="_blank" class="store-card">
+                        <div class="store-logo"><i class="fab fa-amazon"></i></div>
+                        <span>Amazon</span>
+                    </a>
+                    <a href="https://www.ebay.com/" target="_blank" class="store-card">
+                        <div class="store-logo"><i class="fab fa-ebay"></i></div>
+                        <span>eBay</span>
+                    </a>
+                    <a href="https://www.gamestop.com/" target="_blank" class="store-card">
+                        <div class="store-logo gamestop"><i class="fas fa-gamepad"></i></div>
+                        <span>GameStop</span>
+                    </a>
+                    <a href="https://www.microcenter.com/" target="_blank" class="store-card">
+                        <div class="store-logo micro"><i class="fas fa-microchip"></i></div>
+                        <span>Micro Center</span>
+                    </a>
+                </div>
+                <!-- Calzado -->
+                <div class="store-category" data-category="calzado">
+                    <a href="https://www.nike.com/us/es/" target="_blank" class="store-card">
+                        <div class="store-logo nike"><span>✓</span></div>
+                        <span>Nike</span>
+                    </a>
+                    <a href="https://www.adidas.com/us" target="_blank" class="store-card">
+                        <div class="store-logo adidas"><span>///</span></div>
+                        <span>Adidas</span>
+                    </a>
+                    <a href="https://www.newbalance.com/" target="_blank" class="store-card">
+                        <div class="store-logo nb"><span>NB</span></div>
+                        <span>New Balance</span>
+                    </a>
+                    <a href="https://www.snipes.com/" target="_blank" class="store-card">
+                        <div class="store-logo snipes"><span>S</span></div>
+                        <span>Snipes</span>
+                    </a>
+                    <a href="https://www.finishline.com/" target="_blank" class="store-card">
+                        <div class="store-logo finishline"><i class="fas fa-flag-checkered"></i></div>
+                        <span>Finish Line</span>
+                    </a>
+                </div>
+                <!-- Relojes -->
+                <div class="store-category" data-category="relojes">
+                    <a href="https://www.6pm.com/" target="_blank" class="store-card">
+                        <div class="store-logo sixpm"><span>6</span></div>
+                        <span>6PM</span>
+                    </a>
+                    <a href="https://invictastores.com/" target="_blank" class="store-card">
+                        <div class="store-logo invicta"><i class="fas fa-crown"></i></div>
+                        <span>Invicta Store</span>
+                    </a>
+                    <a href="https://www.casio.com/us/" target="_blank" class="store-card">
+                        <div class="store-logo casio"><span>C</span></div>
+                        <span>Casio</span>
+                    </a>
+                    <a href="https://www.amazon.com/-/es/" target="_blank" class="store-card">
+                        <div class="store-logo"><i class="fab fa-amazon"></i></div>
+                        <span>Amazon</span>
+                    </a>
+                    <a href="https://www.fossil.com/" target="_blank" class="store-card">
+                        <div class="store-logo fossil"><i class="fas fa-stopwatch"></i></div>
+                        <span>Fossil</span>
+                    </a>
+                </div>
+                <!-- Carteras -->
+                <div class="store-category" data-category="carteras">
+                    <a href="https://usa.tommy.com/en" target="_blank" class="store-card">
+                        <div class="store-logo tommy"><span>TH</span></div>
+                        <span>Tommy Hilfiger</span>
+                    </a>
+                    <a href="https://www.nordstrom.com/" target="_blank" class="store-card">
+                        <div class="store-logo nordstrom"><span>N</span></div>
+                        <span>Nordstrom</span>
+                    </a>
+                    <a href="https://www.asos.com/us/" target="_blank" class="store-card">
+                        <div class="store-logo asos"><span>A</span></div>
+                        <span>ASOS</span>
+                    </a>
+                    <a href="https://shop.simon.com/" target="_blank" class="store-card">
+                        <div class="store-logo simon"><span>S</span></div>
+                        <span>Shop Simon</span>
+                    </a>
+                </div>
+            </div>
+            <div class="miami-address-box">
+                <div class="miami-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="miami-content">
+                    <h4>Dirección de Envío en Miami</h4>
+                    <p class="miami-address">7270 NW 35th Terrace, Suite 101 Miami, FL. 33122</p>
+                    <p class="miami-note">Usa esta dirección al realizar tus compras en cualquier tienda de Estados
+                        Unidos.</p>
+                </div>
+                <button class="btn btn-primary copy-address" id="copyAddress">
+                    <i class="fas fa-copy"></i> Copiar Dirección
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-text">HSSC <span class="logo-accent">GROUP</span></span>
+                    </div>
+                    <p class="footer-desc">Líderes en comercio exterior con soluciones logísticas eficientes y de alta
+                        calidad.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/HSInternationalCourier/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/hs.international.courier/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Conócenos</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="calculadora.html">Calcula tu Envío</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="servicios.html#almacenaje">Almacenaje</a></li>
+                        <li><a href="servicios.html#flete">Flete Aéreo</a></li>
+                        <li><a href="servicios.html#aduanas">Agencia de Aduanas</a></li>
+                        <li><a href="servicios.html#delivery">Delivery Nacional</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Calle Alas Peruanas #128, Urb. Santa Luzmila – Comas
+                        </li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+51903365398">+51 903 365 398</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@hsscgroup.com">info@hsscgroup.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HSSC GROUP. Todos los derechos reservados.</p>
+                <p class="developer-credit">Diseño web por <a href="#" target="_blank">MathewDev</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/51903365398?text=Hola,%20quiero%20información%20sobre%20sus%20servicios" class="whatsapp-btn"
+        target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="shared.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50
+        });
+    </script>
+</body>
+
+</html>
