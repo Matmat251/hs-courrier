@@ -4,25 +4,8 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    // ========================================
-    // MOBILE NAVIGATION
-    // ========================================
-    const mobileToggle = document.getElementById('mobileToggle');
-    const nav = document.getElementById('nav');
-
-    mobileToggle.addEventListener('click', function () {
-        this.classList.toggle('active');
-        nav.classList.toggle('active');
-    });
-
-    // Close mobile nav when clicking on a link
-    const navLinks = document.querySelectorAll('.nav-list a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function () {
-            mobileToggle.classList.remove('active');
-            nav.classList.remove('active');
-        });
-    });
+    // NOTE: Mobile navigation is handled in shared.js
+    // Do not duplicate here to avoid conflicts
 
     // ========================================
     // HERO SLIDER
@@ -67,15 +50,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Navigation buttons
-    nextBtn.addEventListener('click', function () {
-        nextSlide();
-        resetInterval();
-    });
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+            nextSlide();
+            resetInterval();
+        });
+    }
 
-    prevBtn.addEventListener('click', function () {
-        prevSlide();
-        resetInterval();
-    });
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function () {
+            prevSlide();
+            resetInterval();
+        });
+    }
 
     // Dot navigation
     dots.forEach((dot, index) => {
@@ -87,7 +74,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Auto slide
     function startInterval() {
-        slideInterval = setInterval(nextSlide, 5000);
+        if (slides.length > 0) {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
     }
 
     function resetInterval() {

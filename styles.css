@@ -1398,7 +1398,8 @@ img {
 
     .mobile-toggle {
         display: flex;
-        z-index: 1002;
+        z-index: 1100;
+        cursor: pointer;
     }
 
     .mobile-toggle.active span:nth-child(1) {
@@ -1479,11 +1480,21 @@ img {
 
 @media (max-width: 480px) {
     .hero {
-        min-height: 600px;
+        height: 60vh !important;
+        min-height: 400px !important;
+        max-height: 500px !important;
     }
 
     .hero-title {
-        font-size: 28px;
+        font-size: 26px;
+    }
+
+    .hero-subtitle {
+        font-size: 12px;
+    }
+
+    .hero-text {
+        font-size: 14px;
     }
 
     .hero-buttons {
@@ -1498,6 +1509,14 @@ img {
 
     .hero-service-item {
         flex: 1 1 50%;
+    }
+
+    .hero-dots {
+        bottom: 100px !important;
+    }
+
+    .hero-nav {
+        display: none;
     }
 
     .contact-form-wrapper {
@@ -3767,6 +3786,38 @@ img {
     .miami-address-big {
         font-size: 16px;
     }
+
+    /* Hide planet on mobile */
+    .planet-center,
+    .planet-container-center,
+    .planet-wrapper {
+        display: none !important;
+    }
+
+    /* Fix planet services layout on mobile */
+    .planet-services-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        margin-top: 20px !important;
+    }
+
+    .planet-services-section {
+        padding: 40px 0 !important;
+    }
+
+    .planet-services-col {
+        width: 100% !important;
+    }
+
+    .planet-services-col.left,
+    .planet-services-col.right {
+        text-align: left;
+    }
+
+    .planet-service-item {
+        flex-direction: row !important;
+    }
 }
 
 /* ========================================
@@ -3959,9 +4010,41 @@ img {
 }
 
 @media (max-width: 576px) {
-    .planet-container-center {
-        width: 220px;
-        height: 220px;
+
+    /* Hide planet completely on mobile */
+    .planet-center,
+    .planet-container-center,
+    .planet-wrapper {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        visibility: hidden !important;
+    }
+
+    /* Fix grid to single column - removes the 350px center space */
+    .planet-services-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+        margin-top: 20px !important;
+    }
+
+    .planet-services-col {
+        width: 100% !important;
+        gap: 15px !important;
+    }
+
+    .planet-services-col.left,
+    .planet-services-col.right {
+        align-items: stretch;
+        text-align: left;
+    }
+
+    .planet-service-item {
+        flex-direction: row !important;
+        padding: 15px;
+        margin: 0 !important;
     }
 
     .planet-service-content h4 {
@@ -3971,10 +4054,57 @@ img {
     .planet-service-icon {
         width: 50px;
         height: 50px;
+        min-width: 50px;
     }
 
     .planet-service-icon i {
         font-size: 20px;
+    }
+
+    /* Fix planet section spacing - reduce padding */
+    .planet-services-section {
+        padding: 40px 0 !important;
+    }
+
+    .planet-services-cta {
+        margin-top: 20px;
+    }
+
+    /* Fix hamburger menu - ensure it works */
+    .mobile-toggle {
+        display: flex !important;
+        position: relative;
+        z-index: 1100 !important;
+        cursor: pointer;
+    }
+
+    .nav {
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important;
+        width: 280px !important;
+        height: 100vh !important;
+        background: var(--white) !important;
+        z-index: 1050 !important;
+        transition: right 0.3s ease !important;
+        padding-top: 80px !important;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .nav.active {
+        right: 0 !important;
+    }
+
+    .nav-list {
+        flex-direction: column !important;
+        gap: 0 !important;
+        padding: 20px !important;
+    }
+
+    .nav-list li a {
+        display: block;
+        padding: 15px 20px !important;
+        border-bottom: 1px solid var(--gray-100);
     }
 }
 
