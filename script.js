@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Auto slide
     function startInterval() {
         if (slides.length > 0) {
-            slideInterval = setInterval(nextSlide, 5000);
+            slideInterval = setInterval(nextSlide, 10000);
         }
     }
 
@@ -157,17 +157,33 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', updateActiveNav);
 
     // ========================================
-    // HEADER SHADOW ON SCROLL
+    // HEADER GLASS-TO-SOLID ON SCROLL
     // ========================================
     const header = document.querySelector('.header');
+    const heroSection = document.querySelector('.hero');
 
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 100) {
-            header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.08)';
+    // Only apply glass header logic on pages with a hero section
+    if (header && heroSection) {
+        function updateHeaderOnScroll() {
+            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            const logoImg = header.querySelector('.logo-img');
+
+            if (window.scrollY > heroBottom - 80) {
+                header.classList.add('scrolled');
+                header.style.background = '#ffffff';
+                header.style.backdropFilter = 'none';
+                if (logoImg) logoImg.style.filter = 'none';
+            } else {
+                header.classList.remove('scrolled');
+                header.style.background = '';
+                header.style.backdropFilter = '';
+                if (logoImg) logoImg.style.filter = '';
+            }
         }
-    });
+
+        window.addEventListener('scroll', updateHeaderOnScroll);
+        updateHeaderOnScroll(); // Run on load
+    }
 
     // ========================================
     // CONTACT FORM

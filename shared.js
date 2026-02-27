@@ -74,6 +74,33 @@ function initStoreTabs() {
 }
 
 // ============================================
+// Header Glass/Scroll Logic
+// ============================================
+function initHeaderScroll() {
+    const header = document.querySelector('.header');
+    const heroSlider = document.querySelector('.hero-slider');
+
+    if (!header) return;
+
+    // Pages without a hero slider: immediately show solid header
+    if (!heroSlider) {
+        header.classList.add('scrolled');
+        header.style.background = '#ffffff';
+        header.style.backdropFilter = 'none';
+        header.style.webkitBackdropFilter = 'none';
+        header.style.borderBottom = '1px solid rgba(0,0,0,0.06)';
+        header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+
+        // Fix logo filter
+        const logoImg = header.querySelector('.logo-img');
+        if (logoImg) {
+            logoImg.style.filter = 'none';
+        }
+        return;
+    }
+}
+
+// ============================================
 // Scroll Reveal Animation System
 // ============================================
 function initScrollReveal() {
