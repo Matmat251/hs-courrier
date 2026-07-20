@@ -1,0 +1,24 @@
+package com.hssc.courier.model;
+
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "tbl_roles")
+public class Rol {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer idRol;
+
+    @Column(nullable = false, unique = true, length = 50)
+    private String nombre;
+
+    @Column(length = 200)
+    private String descripcion;
+}
